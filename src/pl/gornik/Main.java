@@ -4,6 +4,7 @@ import pl.gornik.Product.Product;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -55,6 +56,14 @@ public class Main {
         System.out.println("----");
         for(Product product : productList){
             product.displayProduct();
+        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj Przedział: ");
+        int number1 = scanner.nextInt();
+        System.out.println("Podaj kolejną liczbe: ");
+        int number2 = scanner.nextInt();
+        for (Product product : productList) {
+            product.choiceProduct(number1,number2);
         }
     }
 }

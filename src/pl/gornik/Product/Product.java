@@ -1,6 +1,7 @@
 package pl.gornik.Product;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Product {
 
@@ -81,6 +82,17 @@ public class Product {
     public void displayProduct(){
         System.out.println("Jednostkowa cena produktu "+ sizePack + " " +unit+ " " + name + " wynosi " + calculateUnitPrice() + " zł");
     }
+    public void choiceProduct(int number1,int number2){
+            if(getName().toUpperCase().charAt(0) > number1 && getName().toUpperCase().charAt(0) < number2) {
+                System.out.println("name='" + name + '\'' +
+                        ", category='" + category + '\'' +
+                        ", price=" + price +
+                        ", sizePack=" + sizePack +
+                        ", unit='" + unit + '\'' +
+                        '}');
+    }
+}
+
 
 
 }
